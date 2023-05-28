@@ -42,6 +42,12 @@
                     </li>
                 {% endif %}
                 <li class="nav-item">
+                    <a class="nav-link" href="{% url 'chat:home' %}">{% trans 'ChatGPT' %}</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'chat:generate-logo' %}">{% trans 'Image Generation' %}</a>
+                </li>
+                <li class="nav-item">
                     <a class="nav-link" href="{% url 'accounts:change_password' %}">{% trans 'Change password' %}</a>
                 </li>
                 <li class="nav-item">
