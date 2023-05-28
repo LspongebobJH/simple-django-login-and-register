@@ -1,0 +1,25 @@
+{% extends 'layouts/default/page.html' %}
+{% load static %}
+
+
+{% load bootstrap4 %}
+{% load i18n %}
+{% block content %}
+
+	<h3>{% trans 'Name my pet' %}</h3>
+	<form action="{% url 'chat:home' %}" method="post" id="basicform">
+	{% csrf_token %}
+	{% bootstrap_form form %}
+
+	<button class="btn btn-primary" type="submit" >{% trans 'Generate names' %}</button>
+	</form>
+
+	<div>
+	<ul class="result">
+	</ul>
+	</div>
+
+	<script src="{% static 'chat/jquery-3.5.1.min.js' %}"></script>
+	<script src="{% static 'chat/main.js' %}"></script>
+{% endblock %}
+

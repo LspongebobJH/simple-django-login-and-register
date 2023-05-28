@@ -1,4 +1,6 @@
 import os
+from dotenv import load_dotenv
+load_dotenv()
 
 IS_PRODUCTION = os.environ.get('IS_PRODUCTION')
 

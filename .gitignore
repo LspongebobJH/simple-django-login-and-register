@@ -10,5 +10,6 @@ env/
 tmp/
 
 db.sqlite3
+.venv
 .venv/
 .env
