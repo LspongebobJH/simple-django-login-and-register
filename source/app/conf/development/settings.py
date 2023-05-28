@@ -2,11 +2,16 @@ import os
 import warnings
 from django.utils.translation import gettext_lazy as _
 from os.path import dirname
+# import environ
 
 warnings.simplefilter('error', DeprecationWarning)
+warnings.filterwarnings(action="ignore")
 
 BASE_DIR = dirname(dirname(dirname(dirname(os.path.abspath(__file__)))))
 CONTENT_DIR = os.path.join(BASE_DIR, 'content')
+
+# env = environ.Env()
+# environ.Env.read_env(env_file=os.path.join(BASE_DIR, '.env'))
 
 SECRET_KEY = 'NhfTvayqggTBPswCXXhWaN69HuglgZIkM'
 
@@ -30,6 +35,7 @@ INSTALLED_APPS = [
     # Application apps
     'main',
     'accounts',
+    'chat',
 ]
 
 MIDDLEWARE = [
@@ -65,10 +71,20 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'app.wsgi.application'
 
-EMAIL_BACKEND = 'django.core.mail.backends.filebased.EmailBackend'
-EMAIL_FILE_PATH = os.path.join(CONTENT_DIR, 'tmp/emails')
-EMAIL_HOST_USER = 'test@example.com'
-DEFAULT_FROM_EMAIL = 'test@example.com'
+# EMAIL_BACKEND = 'django.core.mail.backends.filebased.EmailBackend'
+# EMAIL_FILE_PATH = os.path.join(CONTENT_DIR, 'tmp/emails')
+# EMAIL_HOST_USER = 'test@example.com'
+# DEFAULT_FROM_EMAIL = 'test@example.com'
+
+# Gmail
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.qq.com'
+EMAIL_HOST_USER = os.environ.get('EMAIL_HOST_USER')
+EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASSWORD')
+EMAIL_PORT = os.environ.get('EMAIL_PORT')
+EMAIL_USE_TLS = False
+EMAIL_USE_SSL = True
+DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
 
 DATABASES = {
     'default': {
@@ -94,8 +110,10 @@ AUTH_PASSWORD_VALIDATORS = [
 
 ENABLE_USER_ACTIVATION = True
 DISABLE_USERNAME = False
-LOGIN_VIA_EMAIL = True
-LOGIN_VIA_EMAIL_OR_USERNAME = False
+# LOGIN_VIA_EMAIL = True
+LOGIN_VIA_EMAIL = False
+# LOGIN_VIA_EMAIL_OR_USERNAME = False
+LOGIN_VIA_EMAIL_OR_USERNAME = True
 LOGIN_REDIRECT_URL = 'index'
 LOGIN_URL = 'accounts:log_in'
 USE_REMEMBER_ME = True
@@ -138,3 +156,4 @@ LOCALE_PATHS = [
 ]
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+OPENAI_API_KEY = os.environ.get("OPENAI_API_KEY")
