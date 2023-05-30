@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-05-28 06:31+0000\n"
+"POT-Creation-Date: 2023-05-30 03:48+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Wentao Han <wentao.han@gmail.com>\n"
 "Language: zh_CN\n"
@@ -94,7 +94,7 @@ msgid "Profile activation"
 msgstr "简档激活"
 
 #: accounts/utils.py:28 content/templates/accounts/profile/change_email.html:8
-#: content/templates/layouts/default/page.html:51
+#: content/templates/layouts/default/page.html:57
 msgid "Change email"
 msgstr "修改电子邮箱"
 
@@ -213,7 +213,7 @@ msgstr "请转到以下页面并选择一个新密码："
 #: content/templates/accounts/remind_username.html:23
 #: content/templates/accounts/resend_activation_code.html:23
 #: content/templates/accounts/restore_password.html:23
-#: content/templates/layouts/default/page.html:58
+#: content/templates/layouts/default/page.html:64
 msgid "Log in"
 msgstr "登录"
 
@@ -251,12 +251,12 @@ msgid "Change"
 msgstr "修改"
 
 #: content/templates/accounts/profile/change_password.html:8
-#: content/templates/layouts/default/page.html:45
+#: content/templates/layouts/default/page.html:51
 msgid "Change password"
 msgstr "修改密码"
 
 #: content/templates/accounts/profile/change_profile.html:8
-#: content/templates/layouts/default/page.html:48
+#: content/templates/layouts/default/page.html:54
 msgid "Change profile"
 msgstr "更改档案"
 
@@ -300,7 +300,7 @@ msgstr ""
 "如果您没有收到电子邮件，请确保您输入了您注册的地址，并检查垃圾邮件文件夹。"
 
 #: content/templates/accounts/sign_up.html:8
-#: content/templates/layouts/default/page.html:61
+#: content/templates/layouts/default/page.html:67
 msgid "Create an account"
 msgstr "创建账号"
 
@@ -309,12 +309,12 @@ msgid "Create"
 msgstr "创建"
 
 #: content/templates/chat/index.html:9
-msgid "Name my pet"
-msgstr "给我的宠物命名"
+msgid "Simple conversation"
+msgstr "简单的对话"
 
 #: content/templates/chat/index.html:14
-msgid "Generate names"
-msgstr "生成名字"
+msgid "Get one answer"
+msgstr "获取回复"
 
 #: content/templates/layouts/default/page.html:30
 msgid "Home"
@@ -324,11 +324,19 @@ msgstr "首页"
 msgid "Django administration"
 msgstr ""
 
-#: content/templates/layouts/default/page.html:54
+#: content/templates/layouts/default/page.html:45
+msgid "ChatGPT"
+msgstr ""
+
+#: content/templates/layouts/default/page.html:48
+msgid "Image Generation"
+msgstr ""
+
+#: content/templates/layouts/default/page.html:60
 msgid "Log out"
 msgstr "登出"
 
-#: content/templates/layouts/default/page.html:68
+#: content/templates/layouts/default/page.html:74
 #: content/templates/main/change_language.html:10
 msgid "Change language"
 msgstr "改变语言"
@@ -344,3 +352,9 @@ msgstr "你的用户名是"
 #: content/templates/main/index.html:13
 msgid "You are a guest."
 msgstr "你目前的身份是访客。"
+
+#~ msgid "Name my pet"
+#~ msgstr "给我的宠物命名"
+
+#~ msgid "Generate names"
+#~ msgstr "生成名字"

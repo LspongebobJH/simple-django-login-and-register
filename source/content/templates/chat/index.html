@@ -6,12 +6,12 @@
 {% load i18n %}
 {% block content %}
 
-	<h3>{% trans 'Name my pet' %}</h3>
+	<h3>{% trans 'Simple conversation' %}</h3>
 	<form action="{% url 'chat:home' %}" method="post" id="basicform">
 	{% csrf_token %}
 	{% bootstrap_form form %}
 
-	<button class="btn btn-primary" type="submit" >{% trans 'Generate names' %}</button>
+	<button class="btn btn-primary" type="submit" >{% trans 'Get one answer' %}</button>
 	</form>
 
 	<div>
