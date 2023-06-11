@@ -2,6 +2,8 @@ import os
 import warnings
 from django.utils.translation import gettext_lazy as _
 from os.path import dirname
+
+# TODO: remember set DEBUG to False when deplot the web
 # import environ
 
 warnings.simplefilter('error', DeprecationWarning)
